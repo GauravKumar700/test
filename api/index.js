@@ -3,10 +3,10 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('../db');
-const authRoutes = require('../routes/auth');
+const serverless = require('serverless-http'); // ✅ NEW
 
 dotenv.config();
-connectDB(); // Connect to MongoDB
+connectDB();
 
 const app = express();
 
@@ -17,4 +17,5 @@ app.get('/', (req, res) => {
     res.send('API is running...');
 });
 
-module.exports = app;
+// ✅ Export the serverless-compatible handler
+module.exports = serverless(app);
