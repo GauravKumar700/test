@@ -29,7 +29,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: 'https://lms-blue-nine.vercel.app/',
+    origin: 'https://lms-blue-nine.vercel.app',
     credentials: true,
 }));
 
