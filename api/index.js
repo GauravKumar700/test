@@ -2,7 +2,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
-const connectDB = require('../db');
+const connectDB = require('../db.js');
 const serverless = require('serverless-http'); // ✅ NEW
 
 dotenv.config();
