@@ -11,7 +11,18 @@ import purchaseRoute from '../routes/purchaseCourse.route.js';
 import courseProgressRoute from '../routes/courseProgress.route.js';
 
 dotenv.config();
-connectDB();
+
+const startServer = async () => {
+    try {
+        await connectDB();
+        console.log("DB connected. Starting server...");
+    } catch (err) {
+        console.error("Failed to connect to DB", err);
+        process.exit(1);
+    }
+};
+
+startServer();
 
 const app = express();
 
