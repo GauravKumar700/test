@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "testing",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node api/index.js"
   },
   "author": "gaurav",
   "license": "ISC",
