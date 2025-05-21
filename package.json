@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "testing",
   "main": "api/index.js",
+  "type": "module",
   "scripts": {
     "test": "test",
     "start": "node api/index.js"
@@ -10,9 +11,18 @@
   "author": "gaurav",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.5.1",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
-    "dotenv": "^16.5.0",
-    "express": "^5.1.0",
-    "mongoose": "^8.15.0"
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.10",
+    "stripe": "^17.3.1",
+    "url": "^0.11.4"
   }
 }
