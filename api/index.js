@@ -3,7 +3,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('../db.js');
-const serverless = require('serverless-http'); // ✅ NEW
+const serverless = require('serverless-http');
 
 dotenv.config();
 connectDB();
@@ -21,5 +21,4 @@ app.all('*', (req, res) => {
     res.status(404).send('Route not found');
 });
 
-// ✅ Export the serverless-compatible handler
 module.exports = serverless(app);
