@@ -17,5 +17,9 @@ app.get('/', (req, res) => {
     res.send('API is running...');
 });
 
+app.all('*', (req, res) => {
+    res.status(404).send('Route not found');
+});
+
 // ✅ Export the serverless-compatible handler
 module.exports = serverless(app);
